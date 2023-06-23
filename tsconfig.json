@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"target": "ESNext",
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "ES2023"],
+		"types": ["vite/client"],
+		"baseUrl": ".",
+		"paths": {
+			"#root/*": ["src/*"]
+		},
+		"esModuleInterop": true,
+        "experimentalDecorators": true,
+	}
+}
