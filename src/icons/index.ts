@@ -1,4 +1,4 @@
-export { default as ArrowRight } from "./arrowRight.svg"
+export { default as ArrowRight } from "./arrow-right.svg"
 export { default as Baby } from "./baby.svg"
 export { default as Car } from "./car.svg"
 export { default as IDCard } from "./id-card.svg"
