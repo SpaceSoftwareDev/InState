@@ -1,0 +1,69 @@
+<template>
+	<div class="card" @click="click">
+		<div class="top">
+			<p>{{ title }}</p>
+			<img :src="icon" class="show-icon" />
+		</div>
+		<p class="desc">
+			<slot />
+		</p>
+
+		<button>
+			Pokračovať <Icon icon="material-symbols:arrow-right-alt-rounded" class="icon" />
+		</button>
+	</div>
+</template>
+
+<script lang="ts" setup>
+import { Icon } from "@iconify/vue"
+import { navigate } from "vite-plugin-ssr/client/router"
+
+const props = defineProps<{
+	icon: string
+	title: string
+	href: string
+}>()
+
+function click() {
+	navigate(props.href)
+}
+</script>
+
+<style lang="scss" scoped>
+.card {
+	@apply border-solid border-2 border-[#E7E7E9] p-4 flex flex-col rounded-lg m-1 pb-1;
+	width: 400px;
+	background: white;
+	transition: all 500ms ease;
+
+	&:hover {
+		scale: 1.01;
+		filter: drop-shadow(10px 5px 20px #0000001b);
+	}
+
+	.top {
+		@apply flex flex-row items-center justify-between;
+		p {
+			@apply text-[#121212] font-bold text-2xl;
+			margin: 0;
+		}
+	}
+
+	.desc {
+		height: 80px;
+		color: #121212c0;
+	}
+
+	button {
+		@apply bg-transparent text-blueish w-full text-left text-sm m-0 p-0 justify-start;
+
+		&:hover {
+			scale: 1;
+		}
+
+		.icon {
+			@apply text-md;
+		}
+	}
+}
+</style>

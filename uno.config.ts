@@ -17,5 +17,10 @@ export default defineConfig({
 		presetTypography(),
 		presetWebFonts()
 	],
-	transformers: [transformerDirectives(), transformerVariantGroup()]
+	transformers: [transformerDirectives(), transformerVariantGroup()],
+	theme: {
+		colors: {
+			blueish: "#1446A7"
+		}
+	}
 })
