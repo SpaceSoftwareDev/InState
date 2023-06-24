@@ -99,7 +99,6 @@ h1 {
 	box-shadow: 0 0 0 0 #1446a71a;
 	transform: scale(1);
 	animation: pulse 2s infinite;
-	animation-delay: 1s;
 }
 
 @keyframes pulse {
