@@ -1,47 +1,41 @@
 import fs from "fs"
+import Twig from 'twig'
+import pdf from "html-pdf"
 import express from "express"
 import { fileURLToPath } from "url"
 import path, { dirname } from "path"
-import { convertJsonLdToJson, isJsonLd, JsonObject } from "../utils/json"
-import puppeteer from "puppeteer"
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const doc = express()
 
-async function printPDF() {
-	const browser = await puppeteer.launch({
-		headless: true
-	})
-
-	  // create a new page
-	const page = await browser.newPage()
-
-	// set your html as the pages content
-	const html = fs.readFileSync('./assets/doc/roadmap.html', 'utf8')
-	await page.setContent(html, {
-		waitUntil: 'domcontentloaded'
-	})
-
-	  // create a pdf buffer
-	const pdfBuffer = await page.pdf({
-		format: 'A4'
-	})
-
-	  // or a .pdf file
-	await page.pdf({
-		format: 'A4',
-		path: `../assets/doc/roadmap.pdf`
-	})
-
-	// close the browser
-	await browser.close()
-}
-
-
-doc.get("/doc/:name", (req, res) => {
-
+doc.post("/doc/:template", (req, res) => {
 	try {
-		printPDF()
-		res.status(200).json({ success: true })
+		const { template } = req.params
+		const vars = req.body
+
+		const templateFile = path.join(__dirname, "../assets", "doc", `${template}.html`)
+		if (!fs.existsSync(templateFile)) {
+			res.status(404).json({ error: "Not Found" })
+			return
+		}
+		const templateContent = fs.readFileSync(templateFile, 'utf8')
+
+		const html = Twig.twig({data: templateContent}).render(vars)
+
+		const tmpDir = './tmp'
+		if (!fs.existsSync(tmpDir)) {
+			fs.mkdirSync(tmpDir)
+		}
+
+		const pdfFilePath = `./tmp/${template}_${new Date().valueOf()}.pdf`
+		const options = { format: "A4", orientation: "portrait" } as pdf.CreateOptions
+
+		pdf.create(html, options).toFile(pdfFilePath, () => {
+			fs.readFile(pdfFilePath , function (err, data){
+				res.contentType("application/pdf")
+				res.status(200).send(data)
+			})
+		})
 	} catch (e) {
 		res.status(500).json({ error: "Internal Server Error" })
 	}

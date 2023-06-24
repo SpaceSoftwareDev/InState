@@ -21,11 +21,13 @@ const isProd = process.env.NODE_ENV === "production"
 
 async function startServer() {
 	const app = express()
-	app.use(compression())
+
 	app.use(body.json())
 	app.use(body.urlencoded({ extended: true }))
 
 	app.use(api)
+
+	app.use(compression())
 
 	if (isProd) app.use(sirv(`${root}/dist/client`))
 	else {
