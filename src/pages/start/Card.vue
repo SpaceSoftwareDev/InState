@@ -47,6 +47,10 @@ function click() {
 			@apply text-[#121212] font-bold text-2xl;
 			margin: 0;
 		}
+
+		.show-icon {
+			@apply text-blueish;
+		}
 	}
 
 	.desc {

@@ -1,0 +1,1 @@
+export default "/stahovanie/test/@questionId"
