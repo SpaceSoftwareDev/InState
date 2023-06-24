@@ -3,10 +3,8 @@
 		<logo class="logo" />
 		<h1>Vitajte v InState</h1>
 		<p>
-			Slovenská republika je krásna krajina nachádzajúca sa v srdci Európy. S bohatou
-			históriou, pôsobivou<br />
-			prírodou a pestrým kultúrnym dedičstvom ponúka množstvo možností pre návštevníkov z
-			celého sveta.
+			InState je portál na jednoduchú prípravu personalizovaných plánov pri zložitých
+			životných situáciách.
 		</p>
 		<button class="white" @click="init">Iniciovať proces <ArrowRight class="icon" /></button>
 	</section>
