@@ -5,11 +5,11 @@
 		:icon="School"
 		:answers="[
 			{
-				text: 'Áno, mám',
-				next: 8
+				text: 'Áno, chcem',
+				next: 9
 			},
 			{
-				text: 'Nie, nemám',
+				text: 'Nie, nechcem',
 				next: 8
 			}
 		]"

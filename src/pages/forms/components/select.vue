@@ -7,14 +7,15 @@
 				{{ option }}
 			</option>
 		</select>
-		<button>Vrátiť sa naspať</button>
+		<button @click="navigate('/stahovanie/8')">Vrátiť sa naspať</button>
 	</div>
 </template>
 <script lang="ts" setup>
+import { navigate } from "vite-plugin-ssr/client/router"
 const props = defineProps<{
 	title: string
 	icon: unknown
-	options: { text: string }[]
+	options: string[]
 }>()
 </script>
 <style lang="scss" scoped>

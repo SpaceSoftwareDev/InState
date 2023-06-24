@@ -1,24 +1,14 @@
 <template>
-	<Simple
-		title="Chcete zmeniť školu pre Šimona Tkáča?"
-		description=""
+	<Select
+		title="Na aký zámer by ste ju chceli zmeniť?"
 		:icon="School"
-		:answers="[
-			{
-				text: 'Áno, chcem',
-				next: 7
-			},
-			{
-				text: 'Nie, nechcem',
-				next: 8
-			}
-		]"
+		:options="['Gymnázium', 'Bilingválne', 'Elektrotechnické', 'Hospodárske', 'Remeselnícke']"
 		@submit="next" />
 </template>
 
 <script lang="ts" setup>
 import { School } from "@/icons"
-import Simple from "@/pages/forms/components/Simple.vue"
+import Select from "@/pages/forms/components/select.vue"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 function next(answer: number) {
