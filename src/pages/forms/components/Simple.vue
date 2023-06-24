@@ -66,4 +66,11 @@ h1 {
 	font-size: 4rem;
 	font-weight: 900;
 }
+
+@media screen and (max-width: 800px) {
+	button {
+		font-size: 8px !important;
+		padding: 8px 12px;
+	}
+}
 </style>

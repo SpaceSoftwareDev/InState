@@ -18,7 +18,7 @@ async function onRenderHtml(pageContext: PageContextBuiltIn & PageContext) {
 	<html${htmlAttrs}>
 		<head>
 			${dangerouslySkipEscape(headTags)}
-			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		</head>
 		<body${bodyAttrs}>
 			<div id="app">${stream}</div>

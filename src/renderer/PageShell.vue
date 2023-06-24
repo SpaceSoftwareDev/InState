@@ -1,18 +1,20 @@
 <template>
 	<div class="layout" :class="{ hidden: !show }">
-		<nav v-if="show" class="navigation">
-			<a href="/" :draggable="false" class="logo"><logo class="logo" /></a>
-			<div class="center" v-if="md">
-				<button>
-					Prihlásiť sa
-					<ArrowRight class="icon" />
-				</button>
-				<button>Reštartovať proces <Loop class="icon" /></button>
-			</div>
-			<div class="center" v-else>
-				<Icon icon="material-symbols:menu-rounded" />
-			</div>
-		</nav>
+		<Transition name="fade" mode="out-in">
+			<nav v-if="show" class="navigation">
+				<a href="/" :draggable="false" class="logo"><logo class="logo" /></a>
+				<div class="center" v-if="md">
+					<button>
+						Prihlásiť sa
+						<ArrowRight class="icon" />
+					</button>
+					<button>Reštartovať proces <Loop class="icon" /></button>
+				</div>
+				<div class="center" v-else>
+					<Icon icon="material-symbols:menu-rounded" />
+				</div>
+			</nav>
+		</Transition>
 		<main class="content" ref="content">
 			<slot />
 		</main>
@@ -90,6 +92,13 @@ button {
 	.icon {
 		font-size: 20px;
 		@apply color-white;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.content {
+		overflow-y: scroll;
+		padding-bottom: 1rem;
 	}
 }
 </style>

@@ -86,4 +86,15 @@ h1 {
 	row-gap: 20px;
 	justify-content: start;
 }
+
+@media screen and (max-width: 800px) {
+	h1 {
+		text-align: center;
+		width: 100%;
+		font-size: 2rem;
+	}
+	.grid {
+		justify-content: center;
+	}
+}
 </style>
