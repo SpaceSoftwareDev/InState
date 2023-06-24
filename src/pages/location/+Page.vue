@@ -9,37 +9,65 @@
 						overflow: hidden;
 						resize: none;
 						max-width: 100%;
-						width: 500px;
+						width: 700px;
+						max-width: 40vw;
 						height: 500px;
 					">
 					<div
 						id="embedded-map-display"
 						style="height: 100%; width: 100%; max-width: 100%">
 						<iframe
+							class="rounded-md"
 							style="height: 100%; width: 100%; border: 0"
 							frameborder="0"
-							src="https://www.google.com/maps/embed/v1/search?q=Bratislava,+Slovensko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							:src="`https://www.google.com/maps/embed/v1/place?q=${search},+Slovensko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`" />
 					</div>
 					<a
 						class="google-map-code-enabler"
 						href="https://www.bootstrapskins.com/themes"
-						id="grab-map-data"
-						>premium bootstrap themes</a
+						id="grab-map-data">
+						premium bootstrap themes</a
 					>
 				</div>
 			</aside>
 			<div class="wrapper">
 				<component :is="MarkerPin" class="pin" />
-				<input type="text" placeholder="Zadaj miesto požadovanej lokality..." />
+				<input
+					v-model="input"
+					type="text"
+					placeholder="Zadaj miesto požadovanej lokality..." />
 			</div>
 
-			<button>Pokračovať<ArrowRight class="icon" /></button>
+			<button @click="click()">Pokračovať<ArrowRight class="icon" /></button>
 		</div>
 	</section>
 </template>
 <script lang="ts" setup>
-import { ArrowRight } from "#root/icons"
-import { MarkerPin } from "../../icons"
+import { ref } from "vue"
+import { watchDebounced } from "@vueuse/core"
+import { ArrowRight, MarkerPin } from "@/icons"
+
+const search = ref("Bratislava")
+const input = ref("")
+watchDebounced(
+	input,
+	() => {
+		search.value = input.value
+	},
+	{
+		debounce: 1000
+	}
+)
+
+const emit = defineEmits<{
+	(event: "send", data: string): void
+}>()
+
+function click() {
+	emit("send", search.value)
+}
 </script>
 <style lang="scss">
 #embedded-map-display.text-marker.map-generator {
@@ -79,5 +107,9 @@ input {
 }
 aside {
 	float: right;
+}
+
+button {
+	margin-top: 10px;
 }
 </style>

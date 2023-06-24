@@ -1,5 +1,5 @@
 <template>
-	<div class="card" @click="click">
+	<div class="card" @click="click" :class="{ disabled }">
 		<div class="top">
 			<p>{{ title }}</p>
 			<component :is="icon" class="show-icon" />
@@ -20,6 +20,7 @@ const props = defineProps<{
 	icon: unknown
 	title: string
 	href: string
+	disabled?: boolean
 }>()
 
 function click() {
@@ -29,15 +30,27 @@ function click() {
 
 <style lang="scss" scoped>
 .card {
-	@apply border-solid border-2 border-[#E7E7E9] p-4 flex flex-col rounded-lg m-1 pb-1;
+	@apply border-solid border-2 border-[#E7E7E9] p-4 flex flex-col rounded-lg m-1 pb-1 relative;
 	width: 400px;
 	background: white;
-	transition: all 500ms ease;
+	transition: all 750ms ease;
 	cursor: pointer;
 
 	&:hover {
 		scale: 1.01;
 		filter: drop-shadow(10px 5px 20px #0000001b);
+
+		&.disabled {
+			scale: 1;
+		}
+	}
+
+	&.disabled:hover {
+		cursor: not-allowed;
+		&:before {
+			box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+			filter: blur(10px);
+		}
 	}
 
 	.top {

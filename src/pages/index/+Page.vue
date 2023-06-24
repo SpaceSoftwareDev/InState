@@ -5,16 +5,14 @@
 			Váš spoločník pri žití <br />
 			v Slovenskej Republike
 		</p>
-		<button class="white" @click="init">
-			Iniciovať proces <Icon icon="material-symbols:arrow-right-alt-rounded" class="icon" />
-		</button>
+		<button class="white" @click="init">Iniciovať proces <ArrowRight class="icon" /></button>
 	</section>
 	<img :src="top" class="top" />
 	<img :src="bottom" class="bottom" />
 </template>
 
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue"
+import { ArrowRight } from "@/icons"
 import logo from "./logo.svg?component"
 import top from "./top.webp"
 import bottom from "./bottom.webp"
@@ -41,6 +39,11 @@ section {
 
 button {
 	@apply px-6 py-3.2;
+
+	.icon {
+		margin-top: 3px;
+		margin-left: 10px;
+	}
 }
 
 img {

@@ -3,6 +3,6 @@ export function getPageTitle(pageContext: {
 	documentProps?: { title: string }
 }): string {
 	const title = pageContext.config.documentProps?.title || pageContext.documentProps?.title
-	if (title) return `${title} - InState`
-	return "InState"
+	if (title) return `${title} | Instate`
+	return "Instate"
 }

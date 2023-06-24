@@ -8,7 +8,8 @@
 				:key="title"
 				:title="title"
 				:icon="icon"
-				:href="href">
+				:href="href"
+				:disabled="href == ''">
 				{{ desc }}
 			</Card>
 		</div>

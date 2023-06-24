@@ -3,7 +3,7 @@ import { performance } from "node:perf_hooks"
 import { blue, bold, yellow, reset, dim, green, cyan } from "colorette"
 
 performance.measure("server")
-const APP_NAME = "InState"
+const APP_NAME = "Instate"
 
 function colorUrl(url: string) {
 	return cyan(url.replace(/:(\d+)/, (_, port) => `:${bold(port)}`))

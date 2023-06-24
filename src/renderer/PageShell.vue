@@ -10,9 +10,6 @@
 					</button>
 					<button>Reštartovať proces <Loop class="icon" /></button>
 				</div>
-				<div class="center" v-else>
-					<Icon icon="material-symbols:menu-rounded" />
-				</div>
 			</nav>
 		</Transition>
 		<main class="content" ref="content">
@@ -99,6 +96,11 @@ button {
 	.content {
 		overflow-y: scroll;
 		padding-bottom: 1rem;
+	}
+
+	.navigation {
+		justify-content: center;
+		align-items: center;
 	}
 }
 </style>
