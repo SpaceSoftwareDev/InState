@@ -2,45 +2,36 @@
 	<section>
 		<h1>Zvolte novú lokáciu vášho bývania</h1>
 		<p>Nižšie si zvolte lokáciu vášho nového bývania</p>
-		<div>
-			<aside>
-				<div
-					style="
-						overflow: hidden;
-						resize: none;
-						max-width: 100%;
-						width: 700px;
-						max-width: 40vw;
-						height: 500px;
-					">
-					<div
-						id="embedded-map-display"
-						style="height: 100%; width: 100%; max-width: 100%">
-						<iframe
-							class="rounded-md"
-							style="height: 100%; width: 100%; border: 0"
-							frameborder="0"
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-							:src="`https://www.google.com/maps/embed/v1/place?q=${search},+Slovensko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`" />
-					</div>
-					<a
-						class="google-map-code-enabler"
-						href="https://www.bootstrapskins.com/themes"
-						id="grab-map-data">
-						premium bootstrap themes</a
-					>
+		<div class="map">
+			<div class="test">
+				<div class="wrapper">
+					<component :is="MarkerPin" class="pin" />
+					<input
+						v-model="input"
+						type="text"
+						placeholder="Zadajte adresu nového bývania..." />
 				</div>
-			</aside>
-			<div class="wrapper">
-				<component :is="MarkerPin" class="pin" />
-				<input
-					v-model="input"
-					type="text"
-					placeholder="Zadaj miesto požadovanej lokality..." />
+				<button @click="click()" class="continue">
+					Pokračovať<ArrowRight class="icon" />
+				</button>
 			</div>
-
-			<button @click="click()">Pokračovať<ArrowRight class="icon" /></button>
+			<div class="map-size">
+				<div id="embedded-map-display" style="height: 100%; width: 100%; max-width: 100%">
+					<iframe
+						class="rounded-md"
+						style="height: 100%; width: 100%; border: 0"
+						frameborder="0"
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						:src="`https://www.google.com/maps/embed/v1/place?q=${search},+Slovensko&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`" />
+				</div>
+				<a
+					class="google-map-code-enabler"
+					href="https://www.bootstrapskins.com/themes"
+					id="grab-map-data">
+					premium bootstrap themes</a
+				>
+			</div>
 		</div>
 	</section>
 </template>
@@ -72,6 +63,11 @@ function click() {
 	max-height: 100%;
 	background: none;
 }
+
+section {
+	max-height: 100%;
+	height: fit-content;
+}
 h1,
 p {
 	margin: 0;
@@ -102,11 +98,73 @@ input {
 	position: relative;
 	width: fit-content;
 }
-aside {
-	float: right;
+.map {
+	display: flex;
+	justify-content: center;
+	margin-left: 0;
+	position: relative;
+	isolation: isolate;
 }
 
-button {
-	margin-top: 10px;
+.test {
+	position: absolute;
+	right: 40px;
+	margin-top: 20px;
+	z-index: 5;
+	button {
+		&.continue {
+			margin-top: 30px;
+			float: right;
+		}
+	}
+}
+
+.map-size {
+	overflow: hidden;
+	resize: none;
+	width: 93vw;
+	height: 500px;
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+	h1 {
+		text-align: center;
+		font-size: 2rem;
+	}
+	p {
+		text-align: center;
+	}
+
+	.map {
+		margin-top: 70px;
+		height: 50px;
+	}
+
+	.test {
+		bottom: 0;
+		top: -110px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+		left: 0;
+
+		button {
+			&.continue {
+				float: left;
+				margin-top: 330px;
+				width: 93vw;
+			}
+		}
+
+		input {
+			width: 93vw;
+		}
+	}
+
+	.map-size {
+		height: 300px;
+	}
 }
 </style>

@@ -71,7 +71,7 @@ function click() {
 	}
 
 	button {
-		@apply bg-transparent text-blueish w-full text-left text-sm m-0 p-0 justify-start;
+		@apply bg-transparent text-blueish w-full text-left text-sm m-0 p-0 justify-start pb-2;
 
 		&:hover {
 			scale: 1;

@@ -39,7 +39,7 @@
 		<button
 			:class="canGoNext ? '' : 'disabled'"
 			:disabled="!canGoNext"
-			@click="navigate('/stahovanie/1')">
+			@click="navigate('/upload')">
 			Pokračovať <component :is="ArrowRight" />
 		</button>
 		<button class="button-right">Odísť <component style="color: #1446a7" :is="Loop" /></button>

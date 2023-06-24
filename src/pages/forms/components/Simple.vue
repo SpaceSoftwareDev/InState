@@ -80,14 +80,19 @@ h1 {
 
 .show-icon {
 	font-size: 50px;
-	scale: 2;
-	margin-bottom: 10px;
+	scale: 1.5;
+	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 800px) {
 	button {
-		font-size: 8px !important;
-		padding: 8px 12px;
+		font-size: 15px !important;
+		padding: 12px 12px;
+		font-weight: 500;
+	}
+	.show-icon {
+		scale: 1;
+		margin-bottom: 0;
 	}
 }
 </style>

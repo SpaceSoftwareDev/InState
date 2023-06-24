@@ -98,6 +98,8 @@ button {
 	.content {
 		overflow-y: scroll;
 		padding-bottom: 1rem;
+		padding: 2px;
+		height: 1000px;
 	}
 
 	.navigation {
