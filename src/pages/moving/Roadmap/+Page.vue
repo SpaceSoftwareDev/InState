@@ -22,32 +22,63 @@
 				<h2>Personalizovaný plán</h2>
 				<div class="line" />
 				<h3>Zmena trvalého pobytu:</h3>
-				<p>
-					1. Je povinné nahlásiť osobne na Mestskom obecnom uráde v meste ktoré bolo
-					zadané pri otázke “kde sa sťahujete” <br />
-				</p>
+				<p>1. Je povinné nahlásiť osobne na Mestskom obecnom uráde v meste Senec<br /></p>
 				<div class="line" />
-				<h3>Pri osobnom ohlásení budete potrebovať</h3>
+				<h3>Pri osobnom ohlásení budete potrebovať:</h3>
 				<p>
-					1. Občiansky preukaz <br />
+					1. Občiansky preukaz<br />
 					2. V pripáde neúčasti vlastníka bytu je potrebný písomný súhlas
 					vlastníka/vlastníkov s prihlásením sa na trvalý pobyt (s úradne overenými
-					podpismi) <br />
-					3. V prípade vašeho dieťaťa do 15 rokov je potrebné predložiť rodný list a
-					prítomnosť rodiča <br />
+					podpismi)<br />
+					3. V prípade vašeho dieťaťa Šimon Tkáč je potrebné predložiť rodný list a
+					prítomnosť rodiča<br />
 					4. Pri návrate zo zahraničia cestovný doklad alebo osvedčenie o štátnom
-					občianstve <br />
+					občianstve<br />
 				</p>
 				<div class="line" />
-				<h3>Nový občiansky preukaz</h3>
-
+				<h3>Nový občiansky preukaz:</h3>
+				<p>
+					1. Po zmene trvalého pobytu ste povinný požiadať o vydanie nového občianskeho
+					preukazu do 30 dní od tejto udalosti.<br />
+					2. O nový občiansky preukaz je potrebné požiadať na okresnom riaditeľstve
+					Policajného zboru. Lokalita policajného zboru v Seneci sa nachádza
+					<a>tu na mape</a>.<br /><br />
+					<b>Doporučujeme vyplniť rezerváciu na webe:</b><br />
+					<a href="https://shorturl.at/crDQW">https://shorturl.at/crDQW</a> <br /><br />
+					3. Je tiež pritom potrebné priniesť aj svoj starý občiansky preukaz. <br />
+					4. Lehota na vydanie dokladu je 30 dní. <br />
+					5. Poplatok za vydanie nového občianskeho preukazu je 4,50 eura. <br />
+					6. Ak v žiadosti o nový preukaz uvediete svoju e-mailovú adresu alebo číslo
+					mobilného telefónu, bude vám zaslaná správa o tom, že občiansky preukaz je
+					pripravený na prevzatie.<br />
+				</p>
 				<div class="line" />
-				<h3>Nahlásenie zmeny zamestnávatelovi</h3>
-
+				<h3>Nahlásenie zmeny zamestnávatelovi:</h3>
+				<p>
+					1. Zmenu trvalého pobytu je potrebné nahlásiť aj svojmu zamestnávateľovi. Pokiaľ
+					ste evidovaní na Úrade práce, socialných vecí a rodiny SR, musíte nahlásiť túto
+					zmenu aj na príslušnom úrade.
+				</p>
 				<div class="line" />
-				<h3>Ostatné inštitúcie</h3>
-
-				<h3>Vaše deti</h3>
+				<h3>Ostatné inštitúcie:</h3>
+				<p>
+					1. Zmenu trvalého bydliska je nutné nahlásiť všetkým, od koho by vám mohla
+					príjsť listová zásielka<br />
+					2.Napríklad dodávatelia energií, mobilní operátori, poskytovatelia televízie a
+					internetu a podobne. Zmeny je najlepšie oznamovať už s novým občianskym
+					preukazom.<br />
+				</p>
+				<h3>Vaše deti:</h3>
+				<p>
+					<b>1. Šimon Tkáč</b>
+					<ul>
+						<li><p>Zoznam stredných škôl v rovnakom obore</p></li>
+						<li><p>Všeobecní lekári v okolí</p></li>
+						<li><p>Je potrebné vybavenie nového OP</p></li>
+						<li><p>Rodný list nájdete tu</p></li>
+						<li><p>Dokument pre prestup dieťaťa je pripravený tu</p></li>
+					</ul>
+				</p>
 			</div>
 		</section>
 	</div>
@@ -61,7 +92,14 @@ import { Download, Printer, Mail } from "@/icons"
 section {
 	height: max-content;
 	padding-bottom: 20px;
-	max-height: 1000px;
+	max-height: 90vh;
+	overflow-y: scroll;
+	padding-bottom: 6rem;
+
+	&:first-of-type {
+		overflow: hidden;
+		padding-bottom: 0;
+	}
 }
 
 h1 {
@@ -91,6 +129,16 @@ h1 {
 		margin-bottom: 1rem;
 		color: black;
 		font-weight: 300;
+	}
+
+	ul, li {
+		color: black;
+		list-style: circle;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	.line {
@@ -164,12 +212,21 @@ button {
 	.half {
 		width: 100%;
 		padding: 10px;
+		max-height: 100000px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		text-align: center;
 		overflow: hidden;
+	}
+
+	ul {
+		padding: 0;
+	}
+
+	li {
+		text-align: start;
 	}
 }
 </style>
