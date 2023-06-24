@@ -103,4 +103,8 @@ button {
 		align-items: center;
 	}
 }
+
+main {
+	overflow: auto;
+}
 </style>
