@@ -11,12 +11,12 @@
 			</p>
 			<div class="col">
 				<div class="row">
-					<button class="mou" @click="navigate('/api/v1/doc/roadmap')">
+					<button class="mou" @click="navigate('/assets/roadmap.pdf')">
 						Stiahnuť plán&nbsp;<Download class="icon" />
 					</button>
 					<button class="email">Poslať na email&nbsp;<Mail class="icon" /></button>
 				</div>
-				<button class="print">Tlačiť&nbsp;<Printer class="icon" /></button>
+				<button class="print" @click="navigate('/assets/roadmap.pdf')">Tlačiť&nbsp;<Printer class="icon" /></button>
 			</div>
 		</section>
 		<section class="w-[50%] half">
