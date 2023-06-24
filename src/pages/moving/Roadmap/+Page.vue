@@ -11,7 +11,9 @@
 			</p>
 			<div class="col">
 				<div class="row">
-					<button class="mou">Stiahnuť plán&nbsp;<Download class="icon" /></button>
+					<button class="mou" @click="navigate('/api/v1/doc/roadmap')">
+						Stiahnuť plán&nbsp;<Download class="icon" />
+					</button>
 					<button class="email">Poslať na email&nbsp;<Mail class="icon" /></button>
 				</div>
 				<button class="print">Tlačiť&nbsp;<Printer class="icon" /></button>
@@ -97,6 +99,7 @@
 </template>
 
 <script lang="ts" setup>
+import { navigate } from "vite-plugin-ssr/client/router"
 import { Download, Printer, Mail } from "@/icons"
 </script>
 
@@ -109,7 +112,7 @@ section {
 	padding-bottom: 6rem;
 
 	&:first-of-type {
-		overflow: hidden;
+		overflow: visible;
 		padding-bottom: 0;
 	}
 }
