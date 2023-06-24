@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue"
 import { computed } from "vue"
-import { ArrowRight, Loop } from "#root/icons"
+import { ArrowRight, Loop } from "@/icons"
 import logo from "./logo.svg?component"
 import { usePageContext } from "./usePageContext"
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core"

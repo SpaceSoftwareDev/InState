@@ -1,10 +1,10 @@
 import { createSSRApp, defineComponent, h, markRaw, reactive } from "vue"
 import PageShell from "./PageShell.vue"
-import type { Component, PageContext, PageProps } from './types'
+import type { Component, PageContext, PageProps } from "./types"
 import { setPageContext } from "./usePageContext"
 import head from "./head"
 import "virtual:uno.css"
-import "#root/styles/index.scss"
+import "@/styles/index.scss"
 
 export function createApp(pageContext: PageContext) {
 	const { Page } = pageContext

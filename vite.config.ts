@@ -20,7 +20,8 @@ export default defineConfig({
 	optimizeDeps: { include: ["cross-fetch", "vue", "unocss"] },
 	resolve: {
 		alias: {
-			"#root": fileURLToPath(new URL("./src", import.meta.url))
+			"#root": fileURLToPath(new URL("./src", import.meta.url)),
+			"@": fileURLToPath(new URL("./src", import.meta.url))
 		}
 	}
 })

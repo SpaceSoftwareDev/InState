@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as icons from "../../icons"
+import * as icons from "@/icons"
 import Card from "./Card.vue"
 import { shallowRef } from "vue"
 

@@ -7,7 +7,7 @@
 		answer2="Nie, nevlastním" />
 </template>
 <script lang="ts" setup>
-import { IDCard } from "../../icons"
-import Test from "#root/pages/forms/components/Simple.vue"
+import { IDCard } from "@/icons"
+import Test from "@/pages/forms/components/Simple.vue"
 </script>
 <style lang="scss" scoped></style>
