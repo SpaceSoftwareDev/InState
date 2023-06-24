@@ -2,12 +2,15 @@
 	<div class="layout" :class="{ hidden: !show }">
 		<nav v-if="show" class="navigation">
 			<a href="/" :draggable="false" class="logo"><logo class="logo" /></a>
-			<div class="center">
+			<div class="center" v-if="md">
 				<button>
 					Prihlásiť sa
 					<ArrowRight class="icon" />
 				</button>
 				<button>Reštartovať proces <Loop class="icon" /></button>
+			</div>
+			<div class="center" v-else>
+				<Icon icon="material-symbols:menu-rounded" />
 			</div>
 		</nav>
 		<main class="content" ref="content">
@@ -17,13 +20,17 @@
 </template>
 
 <script lang="ts" setup>
+import { Icon } from "@iconify/vue"
 import { computed } from "vue"
 import { ArrowRight, Loop } from "#root/icons"
 import logo from "./logo.svg?component"
 import { usePageContext } from "./usePageContext"
+import { useBreakpoints, breakpointsTailwind } from "@vueuse/core"
+const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const ctx = usePageContext()
 const show = computed(() => ctx.urlOriginal !== "/")
+const md = breakpoints.greater("sm")
 </script>
 
 <style lang="scss" scoped>

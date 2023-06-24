@@ -17,8 +17,10 @@ a {
 }
 
 button {
-	@apply flex flex-row items-center justify-center bg-blueish text-white px-6 py-3.2 text-xl font-bold border-none rounded-xl cursor-pointer;
+	@apply flex flex-row items-center justify-center bg-blueish text-white px-8 py-5 text-xl font-bold border-none cursor-pointer;
 	transition: all 500ms ease;
+	border-radius: 8px;
+	font-weight: bold;
 	font-family: "Satoshi";
 
 	&.white {

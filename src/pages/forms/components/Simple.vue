@@ -4,13 +4,13 @@
 		<h1>{{ title }}</h1>
 		<p>{{ description }}</p>
 		<div class="answers">
-			<button class="" @click="">
+			<button @click="">
 				{{ answer1 }}
-				<Icon icon="material-symbols:done" class="" />
+				<Icon icon="material-symbols:done" class="icon" />
 			</button>
 			<button class="white" @click="">
 				{{ answer2 }}
-				<Icon icon="material-symbols:close" class="" />
+				<Icon icon="material-symbols:close" class="icon" />
 			</button>
 		</div>
 	</section>
@@ -30,12 +30,20 @@ const props = defineProps<{
 section {
 	@apply flex flex-col items-center justify-center mt-20 text-center;
 }
-button.white {
-	@apply bg-white text-blueish border-blueish;
-	border: 1px solid;
-	border-radius: 8px;
-	font-size: 1em;
+
+button {
+	font-size: 1rem !important;
+	&.white {
+		border: 1px solid;
+	}
+
+	.icon {
+		font-size: 20px;
+		margin-right: 0;
+		margin-left: 5px;
+	}
 }
+
 .icon {
 	font-size: 4rem;
 }
@@ -48,7 +56,11 @@ p {
 	font-size: 1rem;
 }
 .answers {
-	@apply flex mt-10 justify-between w-85;
+	@apply flex mt-12 justify-center;
+
+	button:nth-of-type(even) {
+		margin-left: 15px;
+	}
 }
 h1 {
 	font-size: 4rem;

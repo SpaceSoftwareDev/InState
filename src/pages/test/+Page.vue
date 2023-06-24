@@ -3,8 +3,8 @@
 		:icon="IDCard"
 		title="Vlastníte EOP?"
 		description="Vlastníte Elektornický Občiansky Preukaz?"
-		answer1="Áno, mám"
-		answer2="Nie, nemám" />
+		answer1="Áno, vlastním"
+		answer2="Nie, nevlastním" />
 </template>
 <script lang="ts" setup>
 import { IDCard } from "../../icons"

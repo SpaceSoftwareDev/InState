@@ -39,6 +39,10 @@ section {
 	}
 }
 
+button {
+	@apply px-6 py-3.2;
+}
+
 img {
 	&.top {
 		right: 100px;

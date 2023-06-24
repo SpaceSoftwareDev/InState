@@ -75,6 +75,8 @@ h1 {
 	font-weight: 900;
 	margin: 0;
 	margin-top: 1rem;
+	width: 90vw;
+	max-width: 900px;
 }
 
 .grid {
