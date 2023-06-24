@@ -44,7 +44,10 @@ function restart() {
 	position: relative;
 
 	&.hidden {
-		@apply bg-blueish flex flex-col items-center justify-center;
+		@apply flex flex-col items-center justify-center;
+		background-image: url("/bg.webp");
+		background-position: center center;
+		background-size: cover;
 
 		.content {
 			height: 100%;

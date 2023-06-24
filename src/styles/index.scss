@@ -16,6 +16,10 @@ a {
 	@apply decoration-dashed;
 }
 
+main.content {
+	overflow: hidden;
+}
+
 button {
 	@apply flex flex-row items-center justify-center bg-blueish text-white px-8 py-5 text-xl font-bold border-none cursor-pointer;
 	transition: all 500ms ease;
@@ -42,8 +46,14 @@ button {
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	h1 {
 		font-size: 2rem !important;
+	}
+	.content {
+		overflow-y: scroll;
+	}
+	.content.hidden {
+		overflow: hidden !important;
 	}
 }

@@ -77,11 +77,13 @@ h1 {
 		color: #000000;
 		font-size: 2em;
 		font-weight: 400;
+		margin: 0;
 	}
 
 	p {
 		color: #0000006d;
 		font-weight: 300;
+		margin: 0;
 	}
 
 	border: 2px solid #e7e7e9;

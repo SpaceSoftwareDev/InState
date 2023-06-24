@@ -1,21 +1,20 @@
 <template>
 	<section>
 		<logo class="logo" />
+		<h1>Vitajte v InState</h1>
 		<p>
-			Váš spoločník pri žití <br />
-			v Slovenskej Republike
+			Slovenská republika je krásna krajina nachádzajúca sa v srdci Európy. S bohatou
+			históriou, pôsobivou<br />
+			prírodou a pestrým kultúrnym dedičstvom ponúka množstvo možností pre návštevníkov z
+			celého sveta.
 		</p>
 		<button class="white" @click="init">Iniciovať proces <ArrowRight class="icon" /></button>
 	</section>
-	<img :src="top" class="top" />
-	<img :src="bottom" class="bottom" />
 </template>
 
 <script lang="ts" setup>
 import { ArrowRight } from "@/icons"
 import logo from "./logo.svg?component"
-import top from "./top.webp"
-import bottom from "./bottom.webp"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 const init = () => {
@@ -25,22 +24,31 @@ const init = () => {
 
 <style lang="scss" scoped>
 section {
-	@apply flex flex-col items-center justify-center text-white mt-20;
+	@apply flex flex-col items-center justify-center text-white mt-20 overflow-hidden;
 	width: 90vw;
-	max-width: 500px;
+	max-width: 800px;
+	h1 {
+		@apply color-blueish text-4xl m-0 font-black;
+	}
 	p {
-		@apply text-white text-center;
-		font-size: 36px;
+		@apply text-gray text-center;
+		font-size: 18px;
 		font-weight: lighter;
-		margin-top: 2.5rem;
+		margin-top: 3rem;
+		max-width: 500px;
 		margin-bottom: 9rem;
 	}
 }
 
+.logo {
+	@apply text-blueish;
+}
+
 button {
-	@apply px-6 py-3.2;
+	@apply px-6 py-3.2 bg-blueish text-white;
 
 	.icon {
+		color: white;
 		margin-top: 3px;
 		margin-left: 10px;
 	}
