@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<component :is="icon" class="icon" />
+		<component v-if="icon" :is="icon" class="icon" />
 		<h1>{{ title }}</h1>
 		<p>{{ description }}</p>
 		<div class="answers">
@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue"
 const props = defineProps<{
-	icon: unknown
+	icon?: unknown
 	title: string
 	description: string
 	answer1: string
@@ -52,7 +52,7 @@ p {
 	margin: 0;
 }
 p {
-	color: rgba(0, 0, 0, 0.8);
+	@apply mt-2 color-dark;
 	font-size: 1rem;
 }
 .answers {
