@@ -1,21 +1,21 @@
 <template>
-		<component :is="icon" class="icon" />
+	<component :is="icon" class="icon" />
 	<h1>Na aký zámer by ste ju chceli zmeniť?</h1>
 	<div class="container">
 		<select>
-			<option v-for="(option, index) in options" :key="index" :value="option">{{option}}</option>
+			<option v-for="(option, index) in options" :key="index" :value="option">
+				{{ option }}
+			</option>
 		</select>
 		<button>Vrátiť sa naspať</button>
 	</div>
 </template>
 <script lang="ts" setup>
-
 const props = defineProps<{
-	title: string,
-	icon: unknown,
-	options: string[]
+	title: string
+	icon: unknown
+	options: { text: string }[]
 }>()
-
 </script>
 <style lang="scss" scoped>
 h1 {
@@ -45,21 +45,21 @@ button {
 }
 
 select {
-	border: 1px solid #E7E7E9;
+	border: 1px solid #e7e7e9;
 	border-radius: 2px;
-	background: rgb(251,251,251);
-	background: linear-gradient(150deg, rgba(251,251,251,1) 23%, rgba(242,242,242,1) 85%);
+	background: rgb(251, 251, 251);
+	background: linear-gradient(150deg, rgba(251, 251, 251, 1) 23%, rgba(242, 242, 242, 1) 85%);
 	width: 200px;
 	height: 55px;
-	@apply  text-blueish;
+	@apply text-blueish;
 }
 
 .icon-container {
 	display: flex;
-    justify-content: center;
+	justify-content: center;
 
 	.icon {
-		font-size: 3rem;;
+		font-size: 3rem;
 	}
 }
 </style>

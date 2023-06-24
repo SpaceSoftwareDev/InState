@@ -42,15 +42,5 @@ button {
 	}
 }
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.01s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-	opacity: 0;
-}
-
 @media screen and (max-width: 800px) {
 }

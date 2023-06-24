@@ -45,6 +45,7 @@
 	</section>
 </template>
 <script lang="ts" setup>
+import { navigate } from "vite-plugin-ssr/client/router"
 import { ref } from "vue"
 import { watchDebounced } from "@vueuse/core"
 import { ArrowRight, MarkerPin } from "@/icons"
@@ -61,12 +62,8 @@ watchDebounced(
 	}
 )
 
-const emit = defineEmits<{
-	(event: "send", data: string): void
-}>()
-
 function click() {
-	emit("send", search.value)
+	navigate("/stahovanie/4")
 }
 </script>
 <style lang="scss">

@@ -1,17 +1,15 @@
 <template>
 	<div class="layout" :class="{ hidden: !show }">
-		<Transition name="fade" mode="out-in">
-			<nav v-if="show" class="navigation">
-				<a href="/" :draggable="false" class="logo"><logo class="logo" /></a>
-				<div class="center" v-if="md">
-					<button>
-						Prihlásiť sa
-						<ArrowRight class="icon" />
-					</button>
-					<button>Reštartovať proces <Loop class="icon" /></button>
-				</div>
-			</nav>
-		</Transition>
+		<nav v-if="show" class="navigation">
+			<a :draggable="false" class="logo"><logo class="logo" /></a>
+			<div class="center" v-if="md">
+				<button>
+					Prihlásiť sa
+					<ArrowRight class="icon" />
+				</button>
+				<button @click="restart">Reštartovať proces <Loop class="icon" /></button>
+			</div>
+		</nav>
 		<main class="content" ref="content">
 			<slot />
 		</main>
@@ -19,17 +17,21 @@
 </template>
 
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue"
 import { computed } from "vue"
 import { ArrowRight, Loop } from "@/icons"
 import logo from "./logo.svg?component"
 import { usePageContext } from "./usePageContext"
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core"
+import { navigate } from "vite-plugin-ssr/client/router"
 const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const ctx = usePageContext()
 const show = computed(() => ctx.urlOriginal !== "/")
 const md = breakpoints.greater("sm")
+
+function restart() {
+	navigate("/start")
+}
 </script>
 
 <style lang="scss" scoped>

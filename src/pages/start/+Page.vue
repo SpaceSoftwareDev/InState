@@ -32,7 +32,7 @@ const data = shallowRef<
 	{
 		title: "Sťahovanie",
 		desc: "Potrebujete pomôcť so sťahovaním?",
-		href: "/stahovanie",
+		href: "/gdpr",
 		icon: icons.House
 	},
 	{
