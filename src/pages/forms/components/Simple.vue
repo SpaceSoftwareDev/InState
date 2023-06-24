@@ -4,11 +4,11 @@
 		<h1 v-html="title"></h1>
 		<p>{{ description }}</p>
 		<div class="answers">
-			<button @click="click(answers[0].next)">
+			<button @click="click(answers[0].next)" :disabled="answers[0]?.status">
 				{{ answers[0]?.text }}
 				<Check class="icon" />
 			</button>
-			<button class="white" @click="click(answers[1].next)">
+			<button class="white" @click="click(answers[1].next)" :disabled="answers[1]?.status">
 				{{ answers[1]?.text }}
 				<Cross class="icon" />
 			</button>
@@ -22,7 +22,7 @@ const props = defineProps<{
 	icon?: unknown
 	title: string
 	description?: string
-	answers: { text: string; next: number | string }[]
+	answers: { text: string; next: number | string; status?: true }[]
 }>()
 
 const emit = defineEmits(["submit"])
@@ -51,6 +51,16 @@ button {
 
 	&:hover {
 		scale: 1.02;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		background-color: gray;
+		color: white;
+		border: none;
+		.icon {
+			color: white;
+		}
 	}
 }
 

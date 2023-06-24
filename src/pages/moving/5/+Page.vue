@@ -10,7 +10,8 @@
 			},
 			{
 				text: 'Nie, nemám',
-				next: 5
+				next: 5,
+				status: true
 			}
 		]"
 		@submit="next" />

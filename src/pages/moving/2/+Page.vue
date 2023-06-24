@@ -5,7 +5,8 @@
 		:answers="[
 			{
 				text: 'Áno, idem do zahraničia',
-				next: 50
+				next: 50,
+				status: true
 			},
 			{
 				text: 'Nie, nejdem do zahraničia',

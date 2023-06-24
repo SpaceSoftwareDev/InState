@@ -5,7 +5,8 @@
 		:answers="[
 			{
 				text: 'Áno, vlastním',
-				next: 2
+				next: 2,
+				status: true
 			},
 			{
 				text: 'Nie, nevlastním',

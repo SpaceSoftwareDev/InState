@@ -85,8 +85,9 @@ input {
 	min-height: 64px;
 	min-width: 316px;
 	border-radius: 12px;
-	border: 2px solid #d8d8d8;
+	border: 2px solid #6c6c6c;
 	font-size: 1rem;
+	background-color: rgb(214, 214, 214);
 
 	&:hover {
 		cursor: not-allowed;

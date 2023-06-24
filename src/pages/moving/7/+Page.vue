@@ -6,11 +6,12 @@
 		:answers="[
 			{
 				text: 'Áno, chcem',
-				next: 9
+				next: 8
 			},
 			{
 				text: 'Nie, nechcem',
-				next: 8
+				next: 9,
+				status: true
 			}
 		]"
 		@submit="next" />

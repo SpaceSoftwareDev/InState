@@ -1,14 +1,23 @@
 <template>
-	<Select
-		title="Na aký zámer by ste ju chceli zmeniť?"
-		:icon="School"
-		:options="['Gymnázium', 'Bilingválne', 'Elektrotechnické', 'Hospodárske', 'Remeselnícke']"
-		@submit="next" />
+	<Simple
+		title="Chcete zmeniť všeobecného lekára pre dieťa Šimon Tkáč"
+		:icon="Pulse"
+		:answers="[
+			{
+				text: 'Áno, chcem',
+				next: 10
+			},
+			{
+				text: 'Nie, nechcem',
+				next: 10,
+				status: true
+			}
+		]" />
 </template>
 
 <script lang="ts" setup>
-import { School } from "@/icons"
-import Select from "@/pages/forms/components/select.vue"
+import { Pulse } from "@/icons"
+import Simple from "@/pages/forms/components/Simple.vue"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 function next(answer: number) {
