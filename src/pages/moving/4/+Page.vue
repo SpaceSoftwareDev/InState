@@ -1,6 +1,6 @@
 <template>
 	<Simple
-		title="Chcete zmeniť trvalý pobyt pre Šimona Tkáča?"
+		title="Chcete zmeniť trvalý pobyt pre vaše dieťa Šimon Tkáč"
 		description=""
 		:icon="Baby"
 		:answers="[

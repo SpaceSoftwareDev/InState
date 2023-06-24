@@ -21,12 +21,6 @@ button {
 	border: none;
 	border-radius: 5rem;
 	background: transparent;
-
-	&:hover svg path {
-		outline: none;
-		filter: drop-shadow(0px 0px 3px var(--glow, #10b981))
-			drop-shadow(0px 0px 1px var(--glow, #10b981));
-	}
 }
 
 .mou {

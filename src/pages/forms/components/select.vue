@@ -1,17 +1,22 @@
 <template>
-	<component :is="icon" class="icon" />
-	<h1>Na aký zámer by ste ju chceli zmeniť?</h1>
-	<div class="container">
-		<select>
-			<option v-for="(option, index) in options" :key="index" :value="option">
-				{{ option }}
-			</option>
-		</select>
-		<button @click="navigate('/stahovanie/8')">Vrátiť sa naspať</button>
-	</div>
+	<section>
+		<Diagram class="icon" />
+		<h1>Na aký zámer by ste ju chceli zmeniť?</h1>
+		<div class="container">
+			<select disabled>
+				<option v-for="(option, index) in options" :key="index" :value="option">
+					{{ option }}
+				</option>
+			</select>
+			<button @click="navigate('/stahovanie/10')" class="continue">
+				Pokračovať<ArrowRight class="icon" />
+			</button>
+		</div>
+	</section>
 </template>
 <script lang="ts" setup>
 import { navigate } from "vite-plugin-ssr/client/router"
+import { Diagram, ArrowRight } from "@/icons"
 const props = defineProps<{
 	title: string
 	icon: unknown
@@ -21,17 +26,17 @@ const props = defineProps<{
 <style lang="scss" scoped>
 h1 {
 	text-align: center;
+	font-size: 4rem;
+	font-weight: 900;
+	margin-top: 0;
 }
 
-button {
-	@apply bg-white text-blueish border-blueish;
-	border: 1px solid;
-	border-radius: 2px;
-	font-size: 1em;
+section {
+	@apply flex flex-col justify-center items-center mt-30;
 }
 
 .icon {
-	font-size: 2rem;
+	font-size: 4rem;
 }
 
 .container {
@@ -52,7 +57,11 @@ select {
 	background: linear-gradient(150deg, rgba(251, 251, 251, 1) 23%, rgba(242, 242, 242, 1) 85%);
 	width: 200px;
 	height: 55px;
-	@apply text-blueish;
+	@apply text-blueish px-2;
+
+	&:hover {
+		cursor: not-allowed;
+	}
 }
 
 .icon-container {
@@ -61,6 +70,15 @@ select {
 
 	.icon {
 		font-size: 3rem;
+	}
+}
+
+button {
+	&.continue {
+		font-size: 1rem !important;
+		height: min-content;
+		width: 200px;
+		height: 55px;
 	}
 }
 </style>

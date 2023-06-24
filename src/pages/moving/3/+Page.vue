@@ -9,7 +9,8 @@
 					<input
 						v-model="input"
 						type="text"
-						placeholder="Zadajte adresu nového bývania..." />
+						placeholder="Zadajte adresu nového bývania..."
+						disabled />
 				</div>
 				<button @click="click()" class="continue">
 					Pokračovať<ArrowRight class="icon" />
@@ -41,8 +42,8 @@ import { ref } from "vue"
 import { watchDebounced } from "@vueuse/core"
 import { ArrowRight, MarkerPin } from "@/icons"
 
-const search = ref("Bratislava")
-const input = ref("")
+const search = ref("Šafárikova 5 Senec")
+const input = ref("Šafárikova 5 Senec")
 watchDebounced(
 	input,
 	() => {
@@ -86,6 +87,10 @@ input {
 	border-radius: 12px;
 	border: 2px solid #d8d8d8;
 	font-size: 1rem;
+
+	&:hover {
+		cursor: not-allowed;
+	}
 }
 .pin {
 	position: absolute;
