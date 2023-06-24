@@ -30,7 +30,7 @@ function click() {
 
 <style lang="scss" scoped>
 .card {
-	@apply border-solid border-2 border-[#E7E7E9] p-4 flex flex-col rounded-lg m-1 pb-1 relative;
+	@apply border-solid border-2 border-[#E7E7E9] p-4 flex flex-col rounded-lg m-1 pb-1.4 relative;
 	width: 400px;
 	background: white;
 	transition: all 750ms ease;

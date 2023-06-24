@@ -90,16 +90,16 @@ h1 {
 	align-items: center;
 	position: absolute;
 	bottom: -100px;
-	background: rgba(157, 176, 215, 1);
+	background: #1445a74c;
 	border-radius: 50%;
 	margin: 10px;
 	height: 290px;
 	width: 290px;
 
-	box-shadow: 0 0 0 0 rgba(157, 176, 215, 1);
+	box-shadow: 0 0 0 0 #1446a71a;
 	transform: scale(1);
 	animation: pulse 2s infinite;
-	animation-delay: 5s;
+	animation-delay: 1s;
 }
 
 @keyframes pulse {

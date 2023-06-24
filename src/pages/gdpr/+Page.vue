@@ -1,6 +1,6 @@
 <template>
 	<div class="icon-holder">
-		<component :is="GDPR" class="icon" />
+		<GDPR class="icon" />
 	</div>
 	<h1>Predtým než začneme</h1>
 	<div class="container">
@@ -40,13 +40,13 @@
 			:class="canGoNext ? '' : 'disabled'"
 			:disabled="!canGoNext"
 			@click="navigate('/upload')">
-			Pokračovať <component :is="ArrowRight" />
+			Pokračovať <ArrowRight />
 		</button>
-		<button class="button-right">Odísť <component style="color: #1446a7" :is="Loop" /></button>
+		<button class="button-right">Odísť <Logout class="icon" /></button>
 	</div>
 </template>
 <script setup lang="ts">
-import { GDPR, ArrowRight, Loop } from "../../icons"
+import { GDPR, ArrowRight, Logout } from "../../icons"
 import { computed } from "vue"
 import { ref } from "vue"
 import { navigate } from "vite-plugin-ssr/client/router"
@@ -57,13 +57,6 @@ const termsOfService = ref(false)
 const canGoNext = computed(() => {
 	return privacyPolicy.value && termsOfService.value
 })
-
-function goNext(url) {
-	if (!canGoNext) {
-		return
-	}
-	navigate(url)
-}
 </script>
 <style lang="scss" scoped>
 h1 {
@@ -123,6 +116,10 @@ a {
 	margin-left: 20px;
 	@apply bg-white text-blueish;
 	border: 2px solid #1446a7;
+
+	.icon {
+		@apply text-blueish;
+	}
 }
 
 svg {

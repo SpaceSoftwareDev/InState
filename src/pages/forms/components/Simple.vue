@@ -1,7 +1,7 @@
 <template>
 	<section>
 		<component v-if="icon" :is="icon" class="show-icon" />
-		<h1>{{ title }}</h1>
+		<h1 v-html="title"></h1>
 		<p>{{ description }}</p>
 		<div class="answers">
 			<button @click="click(answers[0].next)">
@@ -60,7 +60,7 @@ button {
 h1,
 p {
 	margin: 0;
-	max-width: 800px;
+	max-width: 1000px;
 }
 p {
 	@apply mt-2 color-dark;

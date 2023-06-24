@@ -1,6 +1,6 @@
 <template>
 	<Simple
-		title="Chcete zmeniť školu pre Šimona Tkáča?"
+		title="Chcete zmeniť školu pre<br/>Šimona Tkáča?"
 		description=""
 		:icon="School"
 		:answers="[
