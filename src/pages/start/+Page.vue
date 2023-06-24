@@ -9,7 +9,9 @@
 				:title="title"
 				:icon="icon"
 				:href="href"
-				:disabled="href == ''">
+				:disabled="href == ''"
+				:class="href == '' ? 'dev' : ''"
+				>
 				{{ desc }}
 			</Card>
 		</div>
@@ -97,5 +99,9 @@ h1 {
 	.grid {
 		justify-content: center;
 	}
+}
+
+.dev {
+	opacity: 0.4;
 }
 </style>
