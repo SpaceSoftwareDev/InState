@@ -1,6 +1,6 @@
 <template>
-	<div class="flex flex-row">
-		<section class="w-[50%]">
+	<div class="flex flex-row main">
+		<section class="w-[50%] half">
 			<h1>
 				Váš plán je pripravený<br />
 				na stiahnutie
@@ -17,7 +17,7 @@
 				<button class="print">Tlačiť&nbsp;<Printer class="icon" /></button>
 			</div>
 		</section>
-		<section class="w-[50%]">
+		<section class="w-[50%] half">
 			<div class="paper">
 				<h2>Personalizovaný plán</h2>
 				<div class="line" />
@@ -154,5 +154,22 @@ button {
 
 .icon {
 	@apply text-dark m-0;
+}
+
+@media screen and (max-width: 1000px) {
+	div.main {
+		flex-direction: column;
+	}
+
+	.half {
+		width: 100%;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+		overflow: hidden;
+	}
 }
 </style>
