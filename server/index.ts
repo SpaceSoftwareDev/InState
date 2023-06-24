@@ -21,7 +21,6 @@ const isProd = process.env.NODE_ENV === "production"
 
 async function startServer() {
 	const app = express()
-
 	app.use(compression())
 	app.use(body.json())
 	app.use(body.urlencoded({ extended: true }))
