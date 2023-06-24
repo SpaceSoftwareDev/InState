@@ -1,21 +1,21 @@
 <template>
+		<component :is="icon" class="icon" />
 	<h1>Na aký zámer by ste ju chceli zmeniť?</h1>
-	<div class="holder">
+	<div class="container">
 		<select>
-			<option v-for="option in options" :key="option" :value="option">{{option}}</option>
+			<option v-for="(option, index) in options" :key="index" :value="option">{{option}}</option>
 		</select>
 		<button>Vrátiť sa naspať</button>
 	</div>
 </template>
 <script lang="ts" setup>
-import type { PropType } from 'vue'
 
-const options = [
-	"Gymnázium",
-	"Elektrotechnická",
-	"Strojnícka",
-	"Ekonomická",
-]
+const props = defineProps<{
+	title: string,
+	icon: unknown,
+	options: string[]
+}>()
+
 </script>
 <style lang="scss" scoped>
 h1 {
@@ -29,13 +29,17 @@ button {
 	font-size: 1em;
 }
 
-.holder {
+.icon {
+	font-size: 2rem;
+}
+
+.container {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
-.holder * {
+.container * {
 	display: inline-flex;
 	margin: 10px;
 }
@@ -48,5 +52,14 @@ select {
 	width: 200px;
 	height: 55px;
 	@apply  text-blueish;
+}
+
+.icon-container {
+	display: flex;
+    justify-content: center;
+
+	.icon {
+		font-size: 3rem;;
+	}
 }
 </style>

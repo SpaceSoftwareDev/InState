@@ -1,10 +1,10 @@
 <template>
-	<Select>
-
-	</Select>
+	<Select :title="'Lol'" :icon="Upload" :options="['lol', 'kokot']"/>
 </template>
 
 <script lang="ts" setup>
+import { Upload } from "../../icons"
+
 import Select from "../forms/components/select.vue"
 </script>
 
