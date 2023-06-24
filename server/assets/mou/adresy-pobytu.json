@@ -1,0 +1,241 @@
+{
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@id": "rfoperson:2100214042",
+      "@type": "pper:PhysicalPerson",
+      "rdfs:isDefinedBy": {
+        "@id": "rfopersondataset:2022-04-13-rpo-person.rdf"
+      },
+      "person:residency": [
+        {
+          "@id": "rfoaddress:30887247",
+          "@type": "loca:PhysicalAddress",
+          "dct:type": {
+            "@id": "address-type:100001",
+            "skos:inScheme": {
+              "@id": "codelist:CL010139",
+              "dct:title": [
+                {
+                  "@language": "en",
+                  "@value": "Permanent address"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Trvalý pobyt"
+                }
+              ]
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Permanent address"
+              },
+              {
+                "@language": "sk",
+                "@value": "Trvalý pobyt"
+              }
+            ]
+          },
+          "schema:validFrom": {
+            "@value": "2002-03-01",
+            "@type": "xs:date"
+          },
+          "schema:validUntil": {
+            "@type": "xs:date"
+          },
+          "loca:buildingName": {
+            "@value": "1",
+            "@type": "xs:string"
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK0321",
+            "@type": "loca:LAU1",
+            "skos:inScheme": {
+              "@id": "codelist:CL000024"
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Banská Bystrica"
+              },
+              {
+                "@language": "sk",
+                "@value": "Okres Banská Bystrica"
+              }
+            ]
+          },
+          "loca:lau2": {
+            "@id": "lau2:SK0321508985",
+            "@type": "loca:LAU2",
+            "skos:inScheme": {
+              "@id": "codelist:CL000025",
+              "dct:title": [
+                {
+                  "@language": "en",
+                  "@value": "Banská Bystrica"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Banská Bystrica"
+                }
+              ]
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Selce"
+              },
+              {
+                "@language": "sk",
+                "@value": "Selce"
+              }
+            ]
+          },
+          "loca:orientationNumber": {
+            "@value": "1",
+            "@type": "xs:string"
+          },
+          "loca:propertyRegistrationNumber": {
+            "@value": "362",
+            "@type": "xs:string"
+          },
+          "loca:street": {
+            "@id": "rfostreet:18025",
+            "@type": "loca:Street",
+            "skos:inScheme": {
+              "@id": "codelist:rfo-cl0001"
+            },
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "Partizánska ulica"
+            }
+          },
+          "loca:unCountry": {
+            "@id": "https://data.gov.sk/def/uncountry/703",
+            "@type": "loca:UNCountry",
+            "skos:inScheme": {
+              "@id": "codelist:CL000086",
+              "dct:title": [
+                {
+                  "@language": "en",
+                  "@value": "Slovak Republic"
+                },
+                {
+                  "@language": "sk",
+                  "@value": "Slovenská republika"
+                }
+              ]
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ]
+          },
+          "locn:addressId": {
+            "@value": "30887247",
+            "@type": "xs:string"
+          }
+        },
+        {
+          "@id": "rfoaddress:30887248",
+          "@type": "loca:PhysicalAddress",
+          "dct:type": {
+            "@id": "address-type:100002",
+            "skos:inScheme": {
+              "@id": "codelist:CL010139"
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Temporary address"
+              },
+              {
+                "@language": "sk",
+                "@value": "Prechodný pobyt"
+              }
+            ]
+          },
+          "schema:validFrom": {
+            "@value": "2018-07-01",
+            "@type": "xs:date"
+          },
+          "schema:validUntil": {
+            "@value": "2023-12-31",
+            "@type": "xs:date"
+          },
+          "loca:lau1": {
+            "@id": "lau1:SK0234",
+            "@type": "loca:LAU1",
+            "skos:inScheme": {
+              "@id": "codelist:CL000024"
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Nové Zámky"
+              },
+              {
+                "@language": "sk",
+                "@value": "Okres Nové Zámky"
+              }
+            ]
+          },
+          "loca:lau2": {
+            "@id": "lau2:SK0234503061",
+            "@type": "loca:LAU2",
+            "skos:inScheme": {
+              "@id": "codelist:CL000025"
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Belá"
+              },
+              {
+                "@language": "sk",
+                "@value": "Belá"
+              }
+            ]
+          },
+          "loca:propertyRegistrationNumber": {
+            "@value": "49",
+            "@type": "xs:string"
+          },
+          "loca:unCountry": {
+            "@id": "https://data.gov.sk/def/uncountry/703"
+          },
+          "locn:addressId": {
+            "@value": "30887248",
+            "@type": "xs:string"
+          }
+        }
+      ]
+    }
+  ],
+  "@context": {
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "rfopersondataset": "https://rfo.gov.sk/set/rfopersondataset/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rfoperson": "https://rfo.gov.sk/id/person/",
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "person": "http://www.w3.org/ns/person#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "rfoaddress": "https://rfo.gov.sk/id/physical-address/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "lau1": "https://data.gov.sk/def/lau1/",
+    "lau2": "https://data.gov.sk/def/lau2/",
+    "rfostreet": "https://rfo.gov.sk/id/street/",
+    "address-type": "https://data.gov.sk/def/address-type/",
+    "dct": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/"
+  }
+}

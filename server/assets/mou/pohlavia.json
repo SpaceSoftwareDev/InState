@@ -1,0 +1,40 @@
+{
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@id": "rfoperson:2100214042",
+      "@type": "pper:PhysicalPerson",
+      "rdfs:isDefinedBy": {
+        "@id": "rfopersondataset:2022-04-13-rpo-person.rdf"
+      },
+      "pper:sex": {
+        "@id": "sex:2",
+        "@type": "pper:Sex",
+        "skos:inScheme": {
+          "@id": "codelist:CL003003"
+        },
+        "skos:prefLabel": [
+          {
+            "@language": "en",
+            "@value": "female"
+          },
+          {
+            "@language": "sk",
+            "@value": "žena"
+          }
+        ]
+      }
+    }
+  ],
+  "@context": {
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "rfopersondataset": "https://rfo.gov.sk/set/rfopersondataset/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rfoperson": "https://rfo.gov.sk/id/person/",
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "sex": "https://data.gov.sk/def/sex/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "codelist": "https://data.gov.sk/set/codelist/"
+  }
+}

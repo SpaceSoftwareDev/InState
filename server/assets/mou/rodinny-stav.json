@@ -1,0 +1,41 @@
+{
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@id": "rfoperson:2100214042",
+      "@type": "pper:PhysicalPerson",
+      "rdfs:isDefinedBy": {
+        "@id": "rfopersondataset:2022-04-13-rpo-person.rdf"
+      },
+      "pper:maritalStatusType": {
+        "@id": "marital-status:2",
+        "@type": "pper:MaritalStatusType",
+        "skos:inScheme": {
+          "@id": "codelist:CL004002"
+        },
+        "skos:prefLabel": [
+          {
+            "@language": "en",
+            "@value": "married"
+          },
+          {
+            "@language": "sk",
+            "@value": "ženatý, vydatá"
+          }
+        ]
+      }
+    }
+  ],
+  "@context": {
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "rfopersondataset": "https://rfo.gov.sk/set/rfopersondataset/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rfoperson": "https://rfo.gov.sk/id/person/",
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "rfopersontype": "https://rfo.gov.sk/def/person-type/",
+    "marital-status": "https://data.gov.sk/def/marital-status/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "codelist": "https://data.gov.sk/set/codelist/"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@id": "rfoperson:2100214042",
+      "@type": "pper:PhysicalPerson",
+      "rdfs:isDefinedBy": {
+        "@id": "rfopersondataset:2022-04-13-rpo-person.rdf"
+      },
+      "adms:identifier": {
+        "@type": "adms:Identifier",
+        "dct:type": {
+          "@id": "identifiertype:14",
+          "@type": "egov:IdentifierType",
+          "skos:inScheme": {
+            "@id": "codelist:CL004001"
+          },
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Identifikátor záznamu o osobe"
+          }
+        },
+        "skos:notation": {
+          "@value": "2100214042",
+          "@type": "xs:string"
+        },
+        "egov:issuerCountry": {
+          "@id": "https://data.gov.sk/def/uncountry/703",
+          "@type": "loca:UNCountry",
+          "skos:inScheme": {
+            "@id": "codelist:CL000086",
+            "dct:title": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ]
+          },
+          "skos:prefLabel": [
+            {
+              "@language": "en",
+              "@value": "Slovak Republic"
+            },
+            {
+              "@language": "sk",
+              "@value": "Slovenská republika"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "@context": {
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "rfopersondataset": "https://rfo.gov.sk/set/rfopersondataset/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rfoperson": "https://rfo.gov.sk/id/person/",
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "uncoutry": "https://data.gov.sk/def/uncoutry/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  }
+}

@@ -3,6 +3,8 @@ import { listen } from "listhen"
 
 import { renderPage } from "vite-plugin-ssr/server"
 
+import api from "./api"
+
 import server_msg from "./utils/cli"
 
 import body from "body-parser"
@@ -11,6 +13,7 @@ import compression from "compression"
 
 import { dirname } from "path"
 import { fileURLToPath } from "url"
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = `${__dirname}/..`
 
@@ -22,6 +25,8 @@ async function startServer() {
 	app.use(compression())
 	app.use(body.json())
 	app.use(body.urlencoded({ extended: true }))
+
+	app.use(api)
 
 	if (isProd) app.use(sirv(`${root}/dist/client`))
 	else {

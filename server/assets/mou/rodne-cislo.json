@@ -1,0 +1,67 @@
+{
+  "@id": "isvs:191",
+  "@graph": [
+    {
+      "@type": "cccev:Evidence",
+      "dct:subject": {
+        "@id": "rfoperson:2100214042",
+        "@type": "pper:PhysicalPerson",
+        "adms:identifier": {
+          "@type": "adms:Identifier",
+          "dct:type": {
+            "@id": "identifiertype:9",
+            "@type": "egov:IdentifierType",
+            "skos:inScheme": {
+              "@id": "codelist:CL004001"
+            },
+            "skos:prefLabel": {
+              "@language": "sk",
+              "@value": "Rodné číslo"
+            }
+          },
+          "skos:notation": {
+            "@value": "0252283922",
+            "@type": "xs:string"
+          },
+          "egov:issuerCountry": {
+            "@id": "uncountry:703",
+            "@type": "loca:UNCountry",
+            "skos:inScheme": {
+              "@id": "codelist:CL000086"
+            },
+            "skos:prefLabel": [
+              {
+                "@language": "en",
+                "@value": "Slovak Republic"
+              },
+              {
+                "@language": "sk",
+                "@value": "Slovenská republika"
+              }
+            ]
+          }
+        },
+        "pper:birthNumberCode": {
+          "@value": "025228/3922",
+          "@type": "xs:string"
+        }
+      }
+    }
+  ],
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "dct": "http://purl.org/dc/terms/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "xs": "http://www.w3.org/2001/XMLSchema#",
+    "rfoperson": "https://rfo.gov.sk/id/person/"
+  }
+}

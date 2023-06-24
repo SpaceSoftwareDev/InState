@@ -1,0 +1,166 @@
+{
+  "@id": "isvs:6092",
+  "@graph": [
+    {
+      "@type": "cccev:Evidence",
+      "dct:references": {
+        "@type": "edu:Study",
+        "cccev:validityPeriod": {
+          "schema:endDate": {
+            "@value": "2012-08-31",
+            "@type": "xs:gYear"
+          },
+          "schema:startDate": {
+            "@value": "2008-09-01",
+            "@type": "xs:date"
+          }
+        },
+        "dct:dateSubmitted": {
+          "@value": "2020-08-31",
+          "@type": "xs:date"
+        },
+        "dct:validFrom": {
+          "@value": "2016-09-01",
+          "@type": "xs:date"
+        },
+        "edu:educationalInstitution": {
+          "@id": "education-institution:100007363",
+          "@type": "edu:EducationInstitution",
+          "skos:prefLabel": {
+            "@value": "Gymnázium POH v Dolnom Kubíne",
+            "@language": "sk"
+          },
+          "adms:identifier": {
+            "@type": "adms:Identifier",
+            "dct:type": {
+              "@id": "identifiertype:EDUID",
+              "@type": "egov:IdentifierType",
+              "skos:inScheme": {
+                "@id": "codelist:CL004001"
+              },
+              "skos:prefLabel": {
+                "@language": "sk",
+                "@value": "EDUID - Identifikátor v rámci rezortného informačného systému MŠVVaŠ"
+              }
+            },
+            "skos:notation": {
+              "@value": "100007363",
+              "@type": "xs:string"
+            }
+          }
+        },
+        "edu:studyForm": {
+          "@id": "top-study-form:1",
+          "@type": "pper:StudyForm",
+          "skos:inScheme": {
+            "@id": "codelist:top-study-form",
+            "dct:title": {
+              "@language": "sk",
+              "@value": "Formy štúdia"
+            }
+          },
+          "skos:notation": "1",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "denná forma štúdia"
+          }
+        },
+        "edu:studyGrade": "2",
+        "edu:studyInterruption": {
+          "rdfs:description": {
+            "@value": "Bratisl.tepl.-preddavok",
+            "@type": "xs:string"
+          },
+          "schema:endDate": {
+            "@value": "2012-08-31",
+            "@type": "xs:gYear"
+          },
+          "schema:startDate": {
+            "@value": "2009-09-01",
+            "@type": "xs:date"
+          }
+        },
+        "edu:studyType ": {
+          "@id": "study-type:1",
+          "@type": "edu:StudyType",
+          "skos:inScheme": {
+            "@id": "codelist:study-type",
+            "dct:title": {
+              "@language": "sk",
+              "@value": "Forma osobitná-nadväzujúca OVP"
+            }
+          },
+          "skos:notation": "1",
+          "skos:prefLabel": {
+            "@language": "sk",
+            "@value": "Riadne štúdium"
+          }
+        },
+        "edu:studyYear": "2016",
+        "lsub:headquartes": {
+          "@type": "loca:PhysicalAddress",
+          "locn:fullAddress": "Hviezdoslavovo námestie 1659, 026 01 Dolný Kubín"
+        }
+      },
+      "dct:rightHolder": {
+        "@type": "pper:PhysicalPerson",
+        "foaf:familyName": {
+          "@value": "Upviová",
+          "@type": "xs:string"
+        },
+        "foaf:givenName": {
+          "@value": "Paloma",
+          "@type": "xs:string"
+        },
+        "edu:isStudent": {
+          "@value": "true",
+          "@type": "xs:boolean"
+        },
+        "pper:birthNumberCode": {
+          "@value": "025228/3922",
+          "@type": "xs:string"
+        },
+        "pper:dateOfBirth": {
+          "@value": "2002-02-28",
+          "@type": "xs:date"
+        },
+        "pper:givenFamilyName": {
+          "@value": "Mirriová",
+          "@type": "xs:string"
+        }
+      }
+    }
+  ],
+  "@context": {
+    "pper": "https://data.gov.sk/def/ontology/physical-person/",
+    "lsub": "https://data.gov.sk/def/ontology/legal-subject/",
+    "loca": "https://data.gov.sk/def/ontology/location/",
+    "egov": "https://data.gov.sk/def/ontology/egovernment/",
+    "law": "https://data.gov.sk/def/ontology/law/",
+    "edu": "https://data.gov.sk/def/ontology/education/",
+    "name-prefix": "https://data.gov.sk/def/name-prefix/",
+    "name-suffix": "https://data.gov.sk/def/name-prefix/",
+    "uncountry": "https://data.gov.sk/def/uncountry/",
+    "address-type": "https://data.gov.sk/def/address-type/",
+    "identifiertype": "https://data.gov.sk/def/identifier-type/",
+    "top-study-form": "https://data.gov.sk/def/top-study-form/",
+    "narrower-study-form": "https://data.gov.sk/def/narrower-study-form/",
+    "study-type": "https://data.gov.sk/def/study-type/",
+    "study-method-type": "https://data.gov.sk/def/study-method-type/",
+    "address": "https://data.gov.sk/id/physical-address/",
+    "education-institution": "https://minedu.sk/id/education-institution/",
+    "isvs": "https://data.gov.sk/id/egov/isvs/",
+    "codelist": "https://data.gov.sk/set/codelist/",
+    "id-card": "https://minv.gov.sk/id/id-card/",
+    "id-card-person": "https://minv.gov.sk/id/id-card-person/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "person": "https://www.w3.org/ns/person#",
+    "foaf": "http://xmlns.com/foaf/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "xs": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
