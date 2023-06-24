@@ -68,17 +68,29 @@
 					internetu a podobne. Zmeny je najlepšie oznamovať už s novým občianskym
 					preukazom.<br />
 				</p>
+				<div class="line" />
 				<h3>Vaše deti:</h3>
-				<p>
-					<b>1. Šimon Tkáč</b>
-					<ul>
-						<li><p>Zoznam stredných škôl v rovnakom obore</p></li>
-						<li><p>Všeobecní lekári v okolí</p></li>
-						<li><p>Je potrebné vybavenie nového OP</p></li>
-						<li><p>Rodný list nájdete tu</p></li>
-						<li><p>Dokument pre prestup dieťaťa je pripravený tu</p></li>
-					</ul>
-				</p>
+				<p class="mb-0"><b>1. Šimon Tkáč</b></p>
+				<ul>
+					<li>
+						<p>
+							Zoznam stredných škôl - Gymnázii v meste Senec:Gymnázium Antona
+							Bernolákae
+						</p>
+					</li>
+					<li>
+						<p>
+							Zoznam pediatrov v meste senec:MUDr. Danka Grambličková - Pediakard
+							s.r.o
+						</p>
+					</li>
+					<li class="ml-5"><p>Je potrebné vybavenie nového OP</p></li>
+					<li class="ml-5">
+						<p>Rodný list dieťaťa Šimon Tkáč nájdete <a href="">tu</a></p>
+					</li>
+				</ul>
+				<h3>Dokumenty:</h3>
+				<p>Žiadost o prestup na inú skolu sa nachadza <a href="">tu</a></p>
 			</div>
 		</section>
 	</div>
@@ -121,6 +133,7 @@ h1 {
 	h3 {
 		color: black;
 		font-weight: 400;
+		margin-bottom: 5px;
 		margin: 0;
 	}
 
@@ -131,7 +144,8 @@ h1 {
 		font-weight: 300;
 	}
 
-	ul, li {
+	ul,
+	li {
 		color: black;
 		list-style: circle;
 
