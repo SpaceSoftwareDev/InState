@@ -1,17 +1,13 @@
 <template>
 	<div class="layout" :class="{ hidden: !show }">
 		<nav v-if="show" class="navigation">
-			<a href="/" :draggable="false" class="logo">
-				<img :src="logo" :draggable="false" />
-			</a>
+			<a href="/" :draggable="false" class="logo"><logo class="logo" /></a>
 			<div class="center">
 				<button>
 					Prihlásiť sa
-					<Icon icon="material-symbols:arrow-right-alt-rounded" class="icon" />
+					<ArrowRight class="icon" />
 				</button>
-				<button>
-					Reštartovať proces <Icon icon="material-symbols:repeat-rounded" class="icon" />
-				</button>
+				<button>Reštartovať proces <Loop class="icon" /></button>
 			</div>
 		</nav>
 		<main class="content" ref="content">
@@ -22,9 +18,8 @@
 
 <script lang="ts" setup>
 import { computed } from "vue"
-import { Icon } from "@iconify/vue"
-import Link from "./Link.vue"
-import logo from "./logo.svg"
+import { ArrowRight, Loop } from "#root/icons"
+import logo from "./logo.svg?component"
 import { usePageContext } from "./usePageContext"
 
 const ctx = usePageContext()
@@ -49,11 +44,11 @@ const show = computed(() => ctx.urlOriginal !== "/")
 	}
 }
 .content {
-	padding: 0 80px;
+	padding: 0 60px;
 }
 
 .navigation {
-	@apply bg-none py-10 px-[80px] flex flex-row justify-between items-center;
+	@apply bg-none py-10 px-[60px] flex flex-row justify-between items-center;
 	line-height: 1.8em;
 }
 
@@ -63,12 +58,11 @@ const show = computed(() => ctx.urlOriginal !== "/")
 
 .logo {
 	width: 200px;
-	margin-left: 5px;
-	margin-right: 10px;
 	user-select: none;
 
-	img {
+	.logo {
 		width: 100%;
+		margin: 0;
 	}
 }
 
@@ -79,10 +73,16 @@ button {
 
 	&:nth-of-type(even) {
 		@apply border-blueish border-1 border-solid bg-white text-blueish;
+
+		.icon {
+			font-size: 20px;
+			@apply color-blueish;
+		}
 	}
 
 	.icon {
 		font-size: 20px;
+		@apply color-white;
 	}
 }
 </style>

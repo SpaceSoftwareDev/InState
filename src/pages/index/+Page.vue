@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<img :src="logo" class="logo" />
+		<logo class="logo" />
 		<p>
 			Váš spoločník pri žití <br />
 			v Slovenskej Republike
@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { Icon } from "@iconify/vue"
-import logo from "./logo.svg"
+import logo from "./logo.svg?component"
 import top from "./top.webp"
 import bottom from "./bottom.webp"
 import { navigate } from "vite-plugin-ssr/client/router"

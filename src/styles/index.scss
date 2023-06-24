@@ -23,6 +23,10 @@ button {
 
 	&.white {
 		@apply bg-white text-blueish;
+
+		.icon {
+			@apply text-blueish;
+		}
 	}
 
 	.icon {

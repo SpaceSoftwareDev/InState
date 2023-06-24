@@ -2,24 +2,22 @@
 	<div class="card" @click="click">
 		<div class="top">
 			<p>{{ title }}</p>
-			<img :src="icon" class="show-icon" />
+			<component :is="icon" class="show-icon" />
 		</div>
 		<p class="desc">
 			<slot />
 		</p>
 
-		<button>
-			Pokračovať <Icon icon="material-symbols:arrow-right-alt-rounded" class="icon" />
-		</button>
+		<button>Pokračovať <ArrowRight class="icon" /></button>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue"
+import { ArrowRight } from "../../icons"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 const props = defineProps<{
-	icon: string
+	icon: unknown
 	title: string
 	href: string
 }>()
@@ -35,6 +33,7 @@ function click() {
 	width: 400px;
 	background: white;
 	transition: all 500ms ease;
+	cursor: pointer;
 
 	&:hover {
 		scale: 1.01;
@@ -66,7 +65,7 @@ function click() {
 		}
 
 		.icon {
-			@apply text-md;
+			@apply text-blueish text-md;
 		}
 	}
 }

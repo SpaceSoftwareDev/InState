@@ -18,12 +18,12 @@
 <script lang="ts" setup>
 import * as icons from "../../icons"
 import Card from "./Card.vue"
-import { ref } from "vue"
+import { shallowRef } from "vue"
 
-const data = ref<
+const data = shallowRef<
 	{
 		title: string
-		icon: string
+		icon: unknown
 		desc: string
 		href: string
 	}[]
