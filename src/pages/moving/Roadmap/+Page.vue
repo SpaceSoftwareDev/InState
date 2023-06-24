@@ -16,7 +16,9 @@
 					</button>
 					<button class="email">Poslať na email&nbsp;<Mail class="icon" /></button>
 				</div>
-				<button class="print" @click="navigate('/assets/roadmap.pdf')">Tlačiť&nbsp;<Printer class="icon" /></button>
+				<button class="print" @click="navigate('/assets/roadmap.pdf')">
+					Tlačiť&nbsp;<Printer class="icon" />
+				</button>
 			</div>
 		</section>
 		<section class="w-[50%] half">
@@ -186,8 +188,9 @@ h1 {
 	}
 
 	.print {
-		width: calc(100% - 0.5rem);
+		width: calc(100%);
 		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
@@ -198,6 +201,10 @@ button {
 
 	&:hover {
 		@apply bg-blueish text-white;
+	}
+
+	&:nth-of-type(even) {
+		margin-right: 0;
 	}
 
 	.icon {
@@ -224,6 +231,13 @@ button {
 @media screen and (max-width: 1000px) {
 	div.main {
 		flex-direction: column;
+	}
+
+	.row,
+	.col {
+		button {
+			font-size: 14px;
+		}
 	}
 
 	.half {

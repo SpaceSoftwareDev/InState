@@ -104,5 +104,10 @@ h1 {
 		scale: 1;
 		margin-bottom: 0;
 	}
+
+	h1,
+	p {
+		max-width: 90vw;
+	}
 }
 </style>

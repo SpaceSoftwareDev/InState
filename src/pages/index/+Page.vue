@@ -3,8 +3,8 @@
 		<logo class="logo" />
 		<h1>Vitajte v InState</h1>
 		<p>
-			InState je portál na jednoduchú prípravu personalizovaných plánov pri zložitých
-			životných situáciách.
+			InState je portál na jednoduchú prípravu personalizovaných plánov<br />
+			pri zložitých životných situáciách.
 		</p>
 		<button class="white" @click="init">Iniciovať proces <ArrowRight class="icon" /></button>
 	</section>
@@ -24,7 +24,7 @@ const init = () => {
 section {
 	@apply flex flex-col items-center justify-center text-white mt-20 overflow-hidden;
 	width: 90vw;
-	max-width: 800px;
+	max-width: 400px;
 	h1 {
 		@apply color-blueish text-4xl m-0 font-black;
 	}

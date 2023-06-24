@@ -209,4 +209,17 @@ input[type="checkbox"] {
 	border-radius: 0em;
 	transform: rotate(45deg);
 }
+
+@media screen and (max-width: 800px) {
+	.checkmark {
+		width: 2rem;
+		margin-left: 10px;
+	}
+
+	.button-holder {
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+	}
+}
 </style>

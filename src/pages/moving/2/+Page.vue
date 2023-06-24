@@ -4,12 +4,12 @@
 		description="Máte záujem sa sťahovať do zahraničia, alebo máte v pláne zostat v SR?"
 		:answers="[
 			{
-				text: 'Áno, idem do zahraničia',
+				text: 'Odsťáhovávam sa preč',
 				next: 50,
 				status: true
 			},
 			{
-				text: 'Nie, nejdem do zahraničia',
+				text: 'Zostávam v SR',
 				next: 3
 			}
 		]"
