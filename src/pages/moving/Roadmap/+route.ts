@@ -1,1 +1,1 @@
-export default "/stahovanie/final"
+export default "/stahovanie/roadmap"

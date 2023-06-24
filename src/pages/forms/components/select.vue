@@ -8,7 +8,7 @@
 					{{ option }}
 				</option>
 			</select>
-			<button @click="navigate('/stahovanie/8')" class="continue">
+			<button @click="navigate('/stahovanie/9')" class="continue">
 				Pokračovať<ArrowRight class="icon" />
 			</button>
 		</div>

@@ -5,14 +5,15 @@
 		:answers="[
 			{
 				text: 'Áno, chcem',
-				next: 10
+				next: 'roadmap'
 			},
 			{
 				text: 'Nie, nechcem',
-				next: 10,
+				next: 'roadmap',
 				status: true
 			}
-		]" />
+		]"
+		@submit="next" />
 </template>
 
 <script lang="ts" setup>

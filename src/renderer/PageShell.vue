@@ -78,12 +78,12 @@ function restart() {
 }
 
 button {
-	@apply px-5 py-1.2 rounded-md;
+	@apply px-5 py-1.2 rounded-md border-blueish border-[0.5] border-solid;
 	font-size: 16px;
 	margin-right: 10px;
 
 	&:nth-of-type(even) {
-		@apply border-blueish border-[0.5] border-solid bg-white text-blueish;
+		@apply bg-white text-blueish;
 
 		.icon {
 			font-size: 20px;
