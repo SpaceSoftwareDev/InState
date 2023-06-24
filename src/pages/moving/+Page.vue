@@ -1,11 +1,69 @@
 <template>
-	<Select :title="'Lol'" :icon="Upload" :options="['lol', 'kokot']" />
+
+	<div v-for="(Question, index) in Questions" :key="Question.">
+		<Select v-if="Question.type == 'select' && activeQuestion == Question.id" :title="'Lol'" :icon="Upload" :options="['lol', 'kokot']" />
+		<Simple v-if="Question.type == 'simple' && activeQuestion == Question.id" :title="'test'" :answers="Question.answers" :icon="Upload" @submit="next"/>
+	</div>
+
+
 </template>
 
 <script lang="ts" setup>
 import { Upload } from "@/icons"
 
+import { ref } from "vue"
+import { getCurrentInstance } from 'vue'
+
 import Select from "@/pages/forms/components/select.vue"
+import Simple from "@/pages/forms/components/simple.vue"
+
+const instance = getCurrentInstance();
+
+const activeQuestion = ref(0)
+const Questions = [
+	{
+		id: 0,
+		type: "simple",
+		icon: "mdi:account-group",
+		title: "Začnime",
+		description: "Začnime tým, že si vyberieme, čo chceme robiť.",
+		answers: [
+			{
+				text: "Chcem si vybrať",
+				next: 1,
+			},
+			{
+				text: "Neviem si vybrať",
+				next: 2,
+			},
+		],
+	},
+	{
+		id: 1,
+		type: "simple",
+		icon: "mdi:account-group",
+		title: "Začnfrefime",
+		description: "Začnime týfrfm, že si vyberieme, čo chceme robiť.",
+		answers: [
+			{
+				text: "Chcem si vybrať",
+				next: 1,
+			},
+			{
+				text: "Neviem si vybrať",
+				next: 2,
+			},
+		],
+	},
+]
+
+function next(answer) {
+	let question = Questions[activeQuestion.value]
+	activeQuestion.value = question.answers[0].next
+	console.log(question.answers[answer].next)
+}
+
+
 </script>
 
 <style lang="scss" scoped>

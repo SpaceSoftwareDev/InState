@@ -1,1 +1,1 @@
-export default "/stahovanie/test/@questionId"
+export default "/stahovanie/q/@questionId"

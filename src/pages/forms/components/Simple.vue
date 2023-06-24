@@ -4,12 +4,12 @@
 		<h1>{{ title }}</h1>
 		<p>{{ description }}</p>
 		<div class="answers">
-			<button @click="">
-				{{ answer1 }}
+			<button @click="click(0)">
+				{{ answers[0].text }}
 				<Icon icon="material-symbols:done" class="icon" />
 			</button>
-			<button class="white" @click="">
-				{{ answer2 }}
+			<button class="white" @click="click(1)">
+				{{ answers[1].text }}
 				<Icon icon="material-symbols:close" class="icon" />
 			</button>
 		</div>
@@ -22,9 +22,14 @@ const props = defineProps<{
 	icon?: unknown
 	title: string
 	description: string
-	answer1: string
-	answer2: string
+	answers: unknown[]
 }>()
+
+const emit = defineEmits(['submit'])
+
+function click(answer) {
+	emit('submit', answer)
+}
 </script>
 <style lang="scss" scoped>
 section {
