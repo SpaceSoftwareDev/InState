@@ -2,17 +2,17 @@
 	<Simple
 		title="Vlastníte EOP?"
 		description="Vlastníte Elektornický Občiansky Preukaz?"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, vlastním',
 				next: 2,
 				status: true
 			},
-			{
+			no: {
 				text: 'Nie, nevlastním',
 				next: 2
 			}
-		]"
+		}"
 		:icon="IDCard"
 		@submit="next" />
 </template>

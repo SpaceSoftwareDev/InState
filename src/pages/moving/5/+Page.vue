@@ -3,17 +3,17 @@
 		title="Máte súhlas na zmenu bydliska pre Šimona Tkáča?"
 		description=""
 		:icon="Building"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, mám',
 				next: 6
 			},
-			{
+			no: {
 				text: 'Nie, nemám',
 				next: 5,
 				status: true
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 

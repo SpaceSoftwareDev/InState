@@ -2,17 +2,17 @@
 	<Simple
 		title="Sťahujete sa do zahraničia?"
 		description="Máte záujem sa sťahovať do zahraničia, alebo máte v pláne zostat v SR?"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Odsťáhovávam sa preč',
 				next: 50,
 				status: true
 			},
-			{
+			no: {
 				text: 'Zostávam v SR',
 				next: 3
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 

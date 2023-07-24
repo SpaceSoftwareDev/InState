@@ -4,12 +4,12 @@
 		<h1 v-html="title"></h1>
 		<p>{{ description }}</p>
 		<div class="answers">
-			<button @click="click(answers[0].next)" :disabled="answers[0]?.status">
-				{{ answers[0]?.text }}
+			<button @click="click(answers.yes?.next)" :disabled="answers.yes?.status">
+				{{ answers.yes?.text }}
 				<Check class="icon" />
 			</button>
-			<button class="white" @click="click(answers[1].next)" :disabled="answers[1]?.status">
-				{{ answers[1]?.text }}
+			<button class="white" @click="click(answers.no?.next)" :disabled="answers.no?.status">
+				{{ answers.no?.text }}
 				<Cross class="icon" />
 			</button>
 		</div>
@@ -18,16 +18,22 @@
 
 <script lang="ts" setup>
 import { Check, Cross } from "#root/icons"
+type Answer = {
+	text: string
+	next: number | string
+	status?: true
+}
 const props = defineProps<{
 	icon?: unknown
 	title: string
 	description?: string
-	answers: { text: string; next: number | string; status?: true }[]
+	answers: { yes: Answer, no: Answer }
 }>()
 
 const emit = defineEmits(["submit"])
 
-function click(answer: number | string) {
+function click(answer: number | string | undefined) {
+	if (answer === undefined) return
 	emit("submit", answer)
 }
 </script>

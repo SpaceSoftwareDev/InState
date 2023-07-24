@@ -2,17 +2,17 @@
 	<Simple
 		title="Chcete zmeniť všeobecného lekára pre dieťa Šimon Tkáč"
 		:icon="Pulse"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, chcem',
 				next: 'roadmap'
 			},
-			{
+			no: {
 				text: 'Nie, nechcem',
 				next: 'roadmap',
 				status: true
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 

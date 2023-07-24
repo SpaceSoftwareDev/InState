@@ -3,17 +3,17 @@
 		title="Chcete zmeniť školu pre<br/>Šimona Tkáča?"
 		description=""
 		:icon="School"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, chcem',
 				next: 7
 			},
-			{
+			no: {
 				text: 'Nie, nechcem',
 				next: 8,
 				status: true
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 

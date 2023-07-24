@@ -3,17 +3,17 @@
 		title="Chcete zmeniť trvalý pobyt pre vaše dieťa Šimon Tkáč"
 		description=""
 		:icon="Baby"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, chcem',
 				next: 6
 			},
-			{
+			no: {
 				text: 'Nie, nechcem',
 				next: 5,
 				status: true
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 

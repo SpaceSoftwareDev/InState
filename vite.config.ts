@@ -16,7 +16,7 @@ globalThis.__name = __name
 // #endregion
 
 export default defineConfig({
-	plugins: [vue(), UnoCSS(), ssr(), svgLoader()],
+	plugins: [vue(), UnoCSS(), svgLoader(), ssr({ prerender: true })],
 	optimizeDeps: { include: ["cross-fetch", "vue", "unocss"] },
 	resolve: {
 		alias: {

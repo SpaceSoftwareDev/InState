@@ -3,17 +3,17 @@
 		title="Chcete zmeniť zameranie strednej školy Šimona Tkáča?"
 		description=""
 		:icon="School"
-		:answers="[
-			{
+		:answers="{
+			yes: {
 				text: 'Áno, chcem',
 				next: 8
 			},
-			{
+			no: {
 				text: 'Nie, nechcem',
 				next: 9,
 				status: true
 			}
-		]"
+		}"
 		@submit="next" />
 </template>
 
