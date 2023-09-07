@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowRight } from "@/icons"
+import { ArrowRight } from "#/icons"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 const props = defineProps<{

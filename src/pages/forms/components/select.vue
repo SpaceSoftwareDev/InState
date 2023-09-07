@@ -16,7 +16,7 @@
 </template>
 <script lang="ts" setup>
 import { navigate } from "vite-plugin-ssr/client/router"
-import { Diagram, ArrowRight } from "@/icons"
+import { Diagram, ArrowRight } from "#/icons"
 const props = defineProps<{
 	title: string
 	icon: unknown

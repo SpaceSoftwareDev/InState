@@ -18,7 +18,7 @@
 
 <script lang="ts" setup>
 import { computed } from "vue"
-import { ArrowRight, Loop } from "@/icons"
+import { ArrowRight, Loop } from "#/icons"
 import logo from "./logo.svg?component"
 import { usePageContext } from "./usePageContext"
 import { useBreakpoints, breakpointsTailwind } from "@vueuse/core"

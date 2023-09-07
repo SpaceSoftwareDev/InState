@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Upload } from "@/icons"
+import { Upload } from "#/icons"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 const emit = defineEmits(["submit"])

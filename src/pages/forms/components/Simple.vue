@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Check, Cross } from "#root/icons"
+import { Check, Cross } from "#/icons"
 type Answer = {
 	text: string
 	next: number | string
@@ -27,7 +27,7 @@ const props = defineProps<{
 	icon?: unknown
 	title: string
 	description?: string
-	answers: { yes: Answer, no: Answer }
+	answers: { yes: Answer; no: Answer }
 }>()
 
 const emit = defineEmits(["submit"])

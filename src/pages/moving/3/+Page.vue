@@ -40,7 +40,7 @@
 import { navigate } from "vite-plugin-ssr/client/router"
 import { ref } from "vue"
 import { watchDebounced } from "@vueuse/core"
-import { ArrowRight, MarkerPin } from "@/icons"
+import { ArrowRight, MarkerPin } from "#/icons"
 
 const search = ref("Šafárikova 5 Senec")
 const input = ref("Šafárikova 5 Senec")

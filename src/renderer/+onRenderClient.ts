@@ -1,9 +1,12 @@
 import { createApp } from "./app"
 import type { PageContext } from "./types"
-import type { PageContextBuiltInClientWithServerRouting as PageContextBuiltIn } from "vite-plugin-ssr/types"
+import type { PageContextBuiltInClientWithServerRouting } from "vite-plugin-ssr/types"
 
 let app: ReturnType<typeof createApp>
-async function onRenderClient(pageContext: PageContextBuiltIn & PageContext) {
+
+type CTXType = PageContextBuiltInClientWithServerRouting & PageContext
+
+async function onRenderClient(pageContext: CTXType) {
 	if (!app) {
 		app = createApp(pageContext)
 		app.mount("#app")

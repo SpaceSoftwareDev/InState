@@ -102,7 +102,7 @@
 
 <script lang="ts" setup>
 import { navigate } from "vite-plugin-ssr/client/router"
-import { Download, Printer, Mail } from "@/icons"
+import { Download, Printer, Mail } from "#/icons"
 </script>
 
 <style lang="scss" scoped>

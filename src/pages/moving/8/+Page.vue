@@ -7,8 +7,8 @@
 </template>
 
 <script lang="ts" setup>
-import { School } from "@/icons"
-import Select from "@/pages/forms/components/select.vue"
+import { School } from "#/icons"
+import Select from "#/pages/forms/components/select.vue"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 function next(answer: number) {

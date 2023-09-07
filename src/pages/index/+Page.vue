@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowRight } from "@/icons"
+import { ArrowRight } from "#/icons"
 import logo from "./logo.svg?component"
 import { navigate } from "vite-plugin-ssr/client/router"
 

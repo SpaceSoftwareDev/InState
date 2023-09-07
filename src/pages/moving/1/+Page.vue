@@ -18,9 +18,9 @@
 </template>
 
 <script lang="ts" setup>
-import { IDCard } from "@/icons"
+import { IDCard } from "#/icons"
 
-import Simple from "@/pages/forms/components/Simple.vue"
+import Simple from "#/pages/forms/components/Simple.vue"
 import { navigate } from "vite-plugin-ssr/client/router"
 
 function next(answer: number) {

@@ -10,8 +10,7 @@
 				:icon="icon"
 				:href="href"
 				:disabled="href == ''"
-				:class="href == '' ? 'dev' : ''"
-				>
+				:class="href == '' ? 'dev' : ''">
 				{{ desc }}
 			</Card>
 		</div>
@@ -19,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as icons from "@/icons"
+import * as icons from "#/icons"
 import Card from "./Card.vue"
 import { shallowRef } from "vue"
 
